@@ -11,6 +11,18 @@ module.exports = yargs
       demandOption: true,
       default: undefined,
     },
+    l: {
+      alias: 'lock',
+      describe: 'Keep package-lock.json',
+      type: 'boolean',
+      default: false,
+    },
+    b: {
+      alias: 'bare',
+      describe: 'Do not update package.json',
+      type: 'boolean',
+      default: false,
+    },
   })
   .help()
   .alias('h', 'help')

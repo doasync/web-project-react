@@ -18,34 +18,38 @@ if (argv.eject) {
   const root = path.resolve(`${__dirname}/..`);
   const destination = process.cwd();
 
-  const fromPackageObj = fsExtra.readJsonSync(`${root}/package.json`);
-  const toPackageObj = fsExtra.readJsonSync(`${destination}/package.json`);
+  if (!argv.bare) {
+    const fromPackageObj = fsExtra.readJsonSync(`${root}/package.json`);
+    const toPackageObj = fsExtra.readJsonSync(`${destination}/package.json`);
 
-  toPackageObj.scripts = {
-    ...fromPackageObj.scripts,
-    ...toPackageObj.scripts,
-  };
+    toPackageObj.scripts = {
+      ...fromPackageObj.scripts,
+      ...toPackageObj.scripts,
+    };
 
-  delete fromPackageObj.dependencies['yargs'];
-  delete fromPackageObj.dependencies['fs-extra'];
+    delete fromPackageObj.dependencies['yargs'];
+    delete fromPackageObj.dependencies['fs-extra'];
 
-  toPackageObj.dependencies = {
-    ...fromPackageObj.dependencies,
-    ...toPackageObj.dependencies,
-  };
+    toPackageObj.dependencies = {
+      ...fromPackageObj.dependencies,
+      ...toPackageObj.dependencies,
+    };
 
-  toPackageObj.devDependencies = {
-    ...fromPackageObj.devDependencies,
-    ...toPackageObj.devDependencies,
-  };
+    toPackageObj.devDependencies = {
+      ...fromPackageObj.devDependencies,
+      ...toPackageObj.devDependencies,
+    };
 
-  toPackageObj.browserslist = fromPackageObj.browserslist;
+    toPackageObj.browserslist = fromPackageObj.browserslist;
 
-  fsExtra.writeJsonSync(`${destination}/package.json`, toPackageObj, { spaces: 2 });
-  console.log('* ', `${destination}/package.json`);
+    fsExtra.writeJsonSync(`${destination}/package.json`, toPackageObj, { spaces: 2 });
+    console.log('* ', `${destination}/package.json`);
+  }
 
-  fsExtra.removeSync(`${destination}/package-lock.json`);
-  console.log('- ', `${destination}/package-lock.json`);
+  if (!argv.lock) {
+    fsExtra.removeSync(`${destination}/package-lock.json`);
+    console.log('- ', `${destination}/package-lock.json`);
+  }
 
   fsExtra.copySync(root, destination, {
     filter: (from) => {
