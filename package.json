@@ -1,0 +1,23 @@
+{
+  "name": "@web-project/react",
+  "version": "0.0.0",
+  "author": "doasync",
+  "description": "Create a project with Webpack 4, Babel 7, React, Flow, ESLint",
+  "license": "MIT",
+  "keywords": [
+    "webpack",
+    "react",
+    "babel",
+    "eslint",
+    "flow",
+    "create-react-app",
+    "web-project"
+  ],
+  "browserslist": [
+    "Chrome >= 58",
+    "Firefox >= 56",
+    "Safari >= 10.1",
+    "iOS >= 10.3",
+    "Edge >= 16"
+  ]
+}
