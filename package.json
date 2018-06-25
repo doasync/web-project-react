@@ -26,7 +26,7 @@
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js --progress",
-    "build-info": "webpack --config config/webpack.dev.js --profile --display=normal --json > config/info/webpack-stats.json",
+    "build-info": "webpack --config config/webpack.prod.js --profile --display=normal --json > config/info/webpack-stats.json",
     "postbuild-info": "webpack-bundle-analyzer config/info/webpack-stats.json"
   },
   "dependencies": {
