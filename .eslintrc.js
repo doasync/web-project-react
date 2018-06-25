@@ -18,7 +18,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: './config/webpack.dev.js'
+        config: './config/webpack.common.js'
       }
     },
     flowtype: {
