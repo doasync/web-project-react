@@ -12,6 +12,8 @@ const ignoreFiles = [
   'cli',
   'package.json',
   'package-lock.json',
+  'README.md',
+  'LICENSE',
 ];
 
 if (argv.eject) {
