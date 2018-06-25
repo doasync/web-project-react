@@ -1,4 +1,4 @@
-// ESLint root here
+// ESLint root is here
 process.chdir(__dirname);
 
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: './config/webpack.common.js'
+        config: './config/webpack.dev.js'
       }
     },
     flowtype: {
