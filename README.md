@@ -30,7 +30,7 @@ You can use `npx` to eject files to the current working directory:
 npx @web-project/react --eject
 ```
 
-Options:
+##### CLI options
 
 ```
   -e, --eject    Eject files to the directory               [boolean] [required]
@@ -40,7 +40,23 @@ Options:
   -v, --version  Show version number                                   [boolean]
 ```
 
-#### Author
-------------------
+##### Scripts
 
+Runs the app in development mode:
+```
+npm start
+```
+
+Builds the app for production to the "dist" folder:
+```
+npm run build
+```
+
+Opens an interactive visualization treemap of your bundle's contents:
+```
+npm run build-info
+```
+
+Author
+------
 @doasync
