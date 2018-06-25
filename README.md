@@ -25,7 +25,7 @@ npm i --save-dev @web-project/react
 
 Usage
 -----
-You can use `npx` to eject files:
+You can use `npx` to eject files to the current working directory:
 ```bash
 npx @web-project/react --eject
 ```
