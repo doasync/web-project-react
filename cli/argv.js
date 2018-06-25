@@ -13,13 +13,13 @@ module.exports = yargs
     },
     l: {
       alias: 'lock',
-      describe: 'Keep package-lock.json',
+      describe: 'Do not remove package-lock.json',
       type: 'boolean',
       default: false,
     },
     b: {
       alias: 'bare',
-      describe: 'Do not update package.json',
+      describe: 'Do not merge package.json',
       type: 'boolean',
       default: false,
     },
