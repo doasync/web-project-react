@@ -34,8 +34,8 @@ Options:
 
 ```
   -e, --eject    Eject files to the directory               [boolean] [required]
-  -l, --lock     Keep package-lock.json               [boolean] [default: false]
-  -b, --bare     Do not update package.json           [boolean] [default: false]
+  -l, --lock     Do not remove package-lock.json      [boolean] [default: false]
+  -b, --bare     Do not merge package.json            [boolean] [default: false]
   -h, --help     Show help                                             [boolean]
   -v, --version  Show version number                                   [boolean]
 ```
