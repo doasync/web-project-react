@@ -23,6 +23,12 @@ module.exports = yargs
       type: 'boolean',
       default: false,
     },
+    n: {
+      alias: 'no-src',
+      describe: 'Do not copy src folder',
+      type: 'boolean',
+      default: false,
+    },
   })
   .help()
   .alias('h', 'help')

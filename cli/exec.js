@@ -56,6 +56,9 @@ if (argv.eject) {
   fsExtra.copySync(root, destination, {
     filter: (from) => {
       const file = path.relative(root, from);
+      if (argv.noSrc && file === 'src') {
+        return false;
+      }
       if (!ignoreFiles.includes(file)) {
         if (file) {
           console.log('+ ', file);

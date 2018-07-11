@@ -36,6 +36,7 @@ npx @web-project/react --eject
   -e, --eject    Eject files to the directory               [boolean] [required]
   -l, --lock     Do not remove package-lock.json      [boolean] [default: false]
   -b, --bare     Do not merge package.json            [boolean] [default: false]
+  -n, --no-src   Do not copy src folder               [boolean] [default: false]
   -h, --help     Show help                                             [boolean]
   -v, --version  Show version number                                   [boolean]
 ```
