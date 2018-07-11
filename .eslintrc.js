@@ -43,5 +43,20 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: {
+          minProperties: 10,
+          multiline: true,
+          consistent: true
+        },
+        ObjectPattern: {
+          minProperties: 10,
+          multiline: true,
+          consistent: true
+        }
+      }
+    ],
   }
 };
