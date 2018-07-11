@@ -1,18 +1,18 @@
 // @flow
 
+// Entry point
+
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import { appRoot } from './dom-elements';
+import { App } from './app';
 
-const rootElement = document.getElementById('root');
-
-if (rootElement == null) {
+if (appRoot == null) {
   throw new Error('No root element');
 }
 
-const renderApp = async () => {
-  const { App } = await import('~/app' /* webpackChunkName: "app" */);
-
-  ReactDOM.render(<App greeting="Hello" />, rootElement);
+const renderApp = () => {
+  ReactDOM.render(<App />, appRoot);
 };
 
 declare var module: {

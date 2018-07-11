@@ -9,11 +9,12 @@ const dist = `${root}/dist`;
 
 const config = `${root}/config`;
 const modules = `${root}/node_modules`;
-const appModules = `${root}/lib`;
+const appModules = `${root}/packages`;
 
-const entryJs = `${src}/entry.js`;
-const indexHtml = `${src}/index.html`;
+const entryJs = `${src}/client/entry.js`;
+const indexHtml = `${src}/server/index.html`;
 const staticFiles = `${src}/static`;
+const distStatic = dist;
 
 const packageJson = `${root}/package.json`;
 const env = `${root}/.env`;
@@ -22,7 +23,7 @@ const envRef = `${root}/.env.ref`;
 const records = `${config}/info/records.json`;
 
 const output = {
-  assets: 'assets/[name].[hash:6].[ext]',
+  assets: '[path][name].[hash:6].[ext]',
   js: 'js/[name].[chunkhash:6].js',
   chunks: 'js/[name].[chunkhash:6].js',
   devJS: 'js/[name].js',
@@ -36,6 +37,7 @@ module.exports = {
   appModules,
   src,
   staticFiles,
+  distStatic,
   dist,
   entryJs,
   indexHtml,
