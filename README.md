@@ -30,6 +30,8 @@ You can use `npx` to eject files to the current working directory:
 npx @web-project/react --eject
 ```
 
+If your folder is empty, create *package.json* file first (`npm init`)
+
 #### CLI options
 
 ```
