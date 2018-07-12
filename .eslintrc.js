@@ -26,37 +26,7 @@ module.exports = {
     }
   },
   rules: {
-    'space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'always',
-        named: 'always',
-        asyncArrow: 'always'
-      }
-    ],
-    'react/jsx-filename-extension': [
-      'error',
-      {
-        extensions: [
-          '.js'
-        ]
-      }
-    ],
     'import/prefer-default-export': 'off',
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: {
-          minProperties: 10,
-          multiline: true,
-          consistent: true
-        },
-        ObjectPattern: {
-          minProperties: 10,
-          multiline: true,
-          consistent: true
-        }
-      }
-    ],
+    'react/prop-types': 'warn',
   }
 };

@@ -1,8 +1,7 @@
-/node_modules
-/coverage
+node_modules
+/flow-typed
 /build
 /dist
 /.temp
 /.idea
-/flow-typed
 .env
