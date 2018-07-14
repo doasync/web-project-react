@@ -1,11 +1,6 @@
 
-const { browserslist } = require('./package.json');
-
 const presets = [
   ['@babel/preset-env', {
-    targets: {
-      browsers: browserslist,
-    },
     debug: false,
     modules: false,
     useBuiltIns: 'usage',
