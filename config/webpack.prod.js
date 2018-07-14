@@ -12,6 +12,10 @@ const commonConfig = require('./webpack.common.js');
 
 const paths = require('./paths');
 
+const testModules = (...names) => chunk => names.some(
+  name => name && chunk.resource.startsWith(`${paths.modules}/${name}/`),
+);
+
 // -----------------------------Rules-------------------------------------------
 const rules = [{
   oneOf: [
@@ -96,16 +100,22 @@ module.exports = merge(commonConfig, {
     ],
     splitChunks: {
       chunks: 'all',
+      minSize: 0,
+      maxAsyncRequests: 16,
+      maxInitialRequests: 6,
       cacheGroups: {
-        polyfill: {
-          test: `${paths.modules}/core-js/`,
+        polyfills: {
+          test: testModules(
+            'core-js',
+          ),
           reuseExistingChunk: true,
-          priority: 10,
         },
         react: {
-          test: chunk => chunk.resource && (
-            chunk.resource.startsWith(`${paths.modules}/react/`)
-            || chunk.resource.startsWith(`${paths.modules}/react-dom/`)
+          test: testModules(
+            'react',
+            'react-dom',
+            'fbjs',
+            'object-assign',
           ),
         },
       },
