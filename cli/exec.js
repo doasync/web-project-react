@@ -45,6 +45,7 @@ if (argv.eject) {
     };
 
     toPackageObj.browserslist = fromPackageObj.browserslist;
+    toPackageObj.private = true;
 
     fsExtra.writeJsonSync(`${destination}/package.json`, toPackageObj, { spaces: 2 });
     console.log('* ', `${destination}/package.json`);
