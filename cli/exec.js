@@ -73,5 +73,19 @@ if (argv.eject) {
     },
   });
 
+  fsExtra.moveSync(
+    `${destination}/_gitignore`,
+    `${destination}/.gitignore`,
+  );
+
+  console.log('* ', `${destination}/.gitignore`);
+
+  fsExtra.moveSync(
+    `${destination}/config/info/.npmignore`,
+    `${destination}/config/info/.gitignore`,
+  );
+
+  console.log('* ', `${destination}/config/info/.gitignore`);
+
   console.log('\nDone! React project is ejected... Run `npm -i`');
 }
