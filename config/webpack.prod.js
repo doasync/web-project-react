@@ -19,7 +19,15 @@ const rules = [{
     {
       test: /\.js$/,
       include: paths.src,
-      use: 'babel-loader',
+      use: [
+        'babel-loader',
+        {
+          loader: 'eslint-loader',
+          options: {
+            failOnError: true,
+          },
+        },
+      ],
     },
     // Fallback to the "file" loader for all unmatched modules
     {

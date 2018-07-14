@@ -18,12 +18,21 @@ const rules = [{
     {
       test: /\.js$/,
       include: paths.src,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          // cacheDirectory: true // WARNING: can cause babel-loader errors
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            // cacheDirectory: true // WARNING: can cause babel-loader errors
+          },
         },
-      },
+        {
+          loader: 'eslint-loader',
+          options: {
+            cache: true,
+            emitWarning: true,
+          },
+        },
+      ],
     },
     // Fallback to the "file" loader for all unmatched modules
     {
