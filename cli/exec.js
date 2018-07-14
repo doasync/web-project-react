@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-/* eslint-disable dot-notation,no-console */
+'use strict';
+
+/* eslint-disable no-console */
 
 const fsExtra = require('fs-extra');
 const path = require('path');
@@ -29,7 +31,7 @@ if (argv.eject) {
       ...toPackageObj.scripts,
     };
 
-    delete fromPackageObj.dependencies['yargs'];
+    delete fromPackageObj.dependencies.yargs;
     delete fromPackageObj.dependencies['fs-extra'];
 
     toPackageObj.dependencies = {

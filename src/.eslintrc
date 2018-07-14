@@ -4,6 +4,6 @@
   },
   "plugins": ["compat"],
   "rules": {
-    "compat/compat": "warn"
+    "compat/compat": "error"
   }
 }

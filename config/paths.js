@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 
+// eslint-disable-next-line security/detect-non-literal-fs-filename
 const root = fs.realpathSync(`${__dirname}/..`); // resolve any symlinks etc.
 
 const src = `${root}/src`;

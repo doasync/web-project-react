@@ -6,27 +6,36 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     allowImportExportEverywhere: true,
-    codeFrame: false
+    codeFrame: false,
   },
   extends: [
-    'airbnb-bundle',
-    'plugin:flowtype/recommended'
+    'airbnb',
+    'plugin:flowtype/recommended',
+    'plugin:promise/recommended',
   ],
   plugins: [
-    'flowtype'
+    'flowtype',
+    'promise',
   ],
   settings: {
     'import/resolver': {
       webpack: {
-        config: './config/webpack.dev.js'
-      }
+        config: './config/webpack.dev.js',
+      },
     },
     flowtype: {
-      onlyFilesWithFlowAnnotation: false
-    }
+      onlyFilesWithFlowAnnotation: false,
+    },
   },
   rules: {
-    'import/prefer-default-export': 'off',
-    'react/prop-types': 'warn',
-  }
+    'import/prefer-default-export': 'off', // prefer named export
+    'space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'always', // use space
+      asyncArrow: 'always',
+    }],
+    'react/jsx-filename-extension': ['error', {
+      extensions: ['.js'], // no .jsx
+    }],
+  },
 };
