@@ -39,5 +39,8 @@ module.exports = {
     'react/jsx-filename-extension': ['error', {
       extensions: ['.js'], // no .jsx
     }],
+    'eslint-comments/disable-enable-pair': ['error', {
+      allowWholeFile: true,
+    }],
   },
 };
