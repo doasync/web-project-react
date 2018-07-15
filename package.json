@@ -25,9 +25,10 @@
   "bin": "./cli/exec.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "webpack --config config/webpack.prod.js --progress",
+    "build": "npm run build-js",
+    "build-js": "webpack --config config/webpack.prod.js --progress",
     "build-info": "webpack --config config/webpack.prod.js --profile --display=normal --json > config/info/webpack-stats.json",
-    "postbuild-info": "webpack-bundle-analyzer config/info/webpack-stats.json"
+    "postbuild-info": "webpack-bundle-analyzer config/info/webpack-stats.json dist"
   },
   "dependencies": {
     "core-js": "^2.5.7",
