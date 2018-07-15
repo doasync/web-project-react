@@ -9,13 +9,15 @@ module.exports = {
     codeFrame: false,
   },
   extends: [
-    'airbnb',
     'plugin:flowtype/recommended',
+    'plugin:eslint-comments/recommended',
     'plugin:promise/recommended',
+    'airbnb',
   ],
   plugins: [
     'flowtype',
     'promise',
+    'html',
   ],
   settings: {
     'import/resolver': {
