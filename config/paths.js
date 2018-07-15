@@ -15,7 +15,7 @@ const appModules = `${root}/packages`;
 const entryJs = `${src}/client/entry.js`;
 const indexHtml = `${src}/server/index.html`;
 const staticFiles = `${src}/static`;
-const distStatic = dist;
+const distStatic = `${dist}/static`;
 
 const packageJson = `${root}/package.json`;
 const env = `${root}/.env`;
