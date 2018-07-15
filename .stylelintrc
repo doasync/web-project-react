@@ -1,0 +1,48 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-a11y"
+  ],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [true, {
+      "severity": "warning"
+    }],
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "import-normalize"
+      ]
+    }],
+    "font-family-name-quotes": "always-where-recommended",
+    "function-url-quotes": "always",
+    "selector-attribute-quotes": "always",
+    "string-quotes": "single",
+    "at-rule-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "selector-max-compound-selectors": 5,
+    "color-named": "always-where-possible",
+    "selector-max-class": 5,
+    "selector-max-attribute": 3,
+    "selector-max-combinators": 5,
+    "selector-max-id": 5,
+    "selector-max-pseudo-class":3,
+    "selector-no-qualifying-type": true,
+    "selector-max-type": 5,
+    "selector-max-universal": 2,
+    "font-weight-notation": "named-where-possible",
+    "a11y/media-prefers-reduced-motion": true,
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true,
+    "a11y/font-size-is-readable": [true, { "severity": "warning" }],
+    "a11y/line-height-is-vertical-rhythmed": [true, { "severity": "warning" }],
+    "a11y/no-display-none": [true, { "severity": "warning" }],
+    "a11y/no-spread-text": [true, { "severity": "warning" }],
+    "a11y/no-obsolete-attribute": [true, { "severity": "warning" }],
+    "a11y/no-obsolete-element": [true, { "severity": "warning" }],
+    "a11y/no-text-align-justify": [true, { "severity": "warning" }],
+    "a11y/content-property-no-static-value": [true, { "severity": "warning" }]
+  }
+}
