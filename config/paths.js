@@ -26,9 +26,9 @@ const records = `${config}/info/records.json`;
 const output = {
   assets: '[path][name].[hash:6].[ext]',
   js: 'js/[name].[chunkhash:6].js',
-  chunks: 'js/[name].[chunkhash:6].js',
-  devJS: 'js/[name].js',
-  devChunks: 'js/[name].js',
+  jsChunks: 'js/[name].[chunkhash:6].js',
+  devJs: 'js/[name].js',
+  devJsChunks: 'js/[name].js',
 };
 
 module.exports = {

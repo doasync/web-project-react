@@ -12,7 +12,7 @@ const commonConfig = require('./webpack.common.js');
 
 const paths = require('./paths');
 
-const testModules = (...names) => chunk => names.some(
+const testModules = (...names) => chunk => chunk.resource && names.some(
   name => name && chunk.resource.startsWith(`${paths.modules}/${name}/`),
 );
 
@@ -70,11 +70,14 @@ const plugins = [
 // ------------------------- Production config ---------------------------------
 module.exports = merge(commonConfig, {
   mode: 'production',
+  entry: {
+    main: paths.entryJs,
+  },
   bail: true,
   devtool: false,
   output: {
     filename: paths.output.js,
-    chunkFilename: paths.output.chunks,
+    chunkFilename: paths.output.jsChunks,
   },
   module: {
     rules,

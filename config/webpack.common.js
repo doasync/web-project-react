@@ -6,9 +6,6 @@ const nodeLibsBrowser = require('./node-libs-browser');
 // --------------------------Common config--------------------------------------
 module.exports = {
   context: paths.root,
-  entry: {
-    main: paths.entryJs,
-  },
   resolve: {
     modules: ['node_modules', paths.appModules],
     extensions: ['.js', '.json'],

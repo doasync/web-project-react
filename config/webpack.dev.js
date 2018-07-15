@@ -40,6 +40,7 @@ const rules = [{
       use: {
         loader: 'file-loader',
         options: {
+          context: paths.src,
           name: paths.output.assets,
         },
       },
@@ -71,10 +72,13 @@ const plugins = [
 // -------------------------- Development config -------------------------------
 module.exports = merge(commonConfig, {
   mode: 'development',
+  entry: {
+    main: paths.entryJs,
+  },
   output: {
     pathinfo: true,
-    filename: paths.output.devJS,
-    chunkFilename: paths.output.devChunks,
+    filename: paths.output.devJs,
+    chunkFilename: paths.output.devJsChunks,
   },
   module: {
     // noParse: function... <- Skip parsing (if no import, require, define)
