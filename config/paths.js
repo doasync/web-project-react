@@ -14,8 +14,8 @@ const appModules = `${root}/packages`;
 
 const entryJs = `${src}/client/entry.js`;
 const indexHtml = `${src}/server/index.html`;
-const staticFiles = `${src}/static`;
-const distStatic = `${dist}/static`;
+const publicFiles = `${src}/static`;
+const copyPublic = dist;
 
 const packageJson = `${root}/package.json`;
 const env = `${root}/.env`;
@@ -37,8 +37,8 @@ module.exports = {
   modules,
   appModules,
   src,
-  staticFiles,
-  distStatic,
+  publicFiles,
+  copyPublic,
   dist,
   entryJs,
   indexHtml,

@@ -53,7 +53,7 @@ const rules = [{
 const plugins = [
   new CleanWebpackPlugin([paths.dist], { root: paths.root }),
   new CopyWebpackPlugin([
-    { from: paths.staticFiles, to: paths.distStatic },
+    { from: paths.publicFiles, to: paths.copyPublic },
   ]),
   new HtmlWebpackPlugin({
     inject: 'body',
