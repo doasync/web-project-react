@@ -14,7 +14,7 @@ const appModules = `${root}/packages`;
 
 const entryJs = `${src}/client/entry.js`;
 const indexHtml = `${src}/server/index.html`;
-const publicFiles = `${src}/static`;
+const publicFiles = `${src}/public`;
 const copyPublic = dist;
 
 const packageJson = `${root}/package.json`;
