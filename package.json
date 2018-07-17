@@ -1,6 +1,6 @@
 {
   "name": "@web-project/react",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "author": "doasync",
   "description": "Create a project with Webpack 4, Babel 7, React, Flow, ESLint",
   "license": "MIT",
