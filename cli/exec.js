@@ -76,6 +76,7 @@ if (argv.eject) {
   fsExtra.moveSync(
     `${destination}/_gitignore`,
     `${destination}/.gitignore`,
+    { overwrite: true },
   );
 
   console.log('* ', `${destination}/.gitignore`);
@@ -83,6 +84,7 @@ if (argv.eject) {
   fsExtra.moveSync(
     `${destination}/config/info/.npmignore`,
     `${destination}/config/info/.gitignore`,
+    { overwrite: true },
   );
 
   console.log('* ', `${destination}/config/info/.gitignore`);
