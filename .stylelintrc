@@ -1,8 +1,7 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "stylelint-no-unsupported-browser-features",
-    "stylelint-a11y"
+    "stylelint-no-unsupported-browser-features"
   ],
   "rules": {
     "plugin/no-unsupported-browser-features": [true, {
@@ -32,15 +31,6 @@
     "selector-no-qualifying-type": true,
     "selector-max-type": 5,
     "selector-max-universal": 2,
-    "font-weight-notation": "named-where-possible",
-    "a11y/media-prefers-reduced-motion": true,
-    "a11y/no-outline-none": true,
-    "a11y/selector-pseudo-class-focus": true,
-    "a11y/font-size-is-readable": [true, { "severity": "warning" }],
-    "a11y/line-height-is-vertical-rhythmed": [true, { "severity": "warning" }],
-    "a11y/no-display-none": [true, { "severity": "warning" }],
-    "a11y/no-obsolete-attribute": [true, { "severity": "warning" }],
-    "a11y/no-obsolete-element": [true, { "severity": "warning" }],
-    "a11y/no-text-align-justify": [true, { "severity": "warning" }]
+    "font-weight-notation": "named-where-possible"
   }
 }
