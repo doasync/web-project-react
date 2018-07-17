@@ -4,12 +4,11 @@
 
 import * as React from 'react';
 import ReactDOM from 'react-dom';
+import invariant from 'fbjs/lib/invariant';
 import { appRoot } from './dom-elements';
 import { App } from './app';
 
-if (appRoot == null) {
-  throw new Error('No root element');
-}
+invariant(appRoot != null, 'No root element');
 
 const renderApp = () => {
   ReactDOM.render(<App />, appRoot);

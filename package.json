@@ -32,10 +32,11 @@
   },
   "dependencies": {
     "core-js": "^2.5.7",
+    "fbjs": "^0.8.17",
+    "fs-extra": "^6.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "yargs": "^11",
-    "fs-extra": "^6.0.1"
+    "yargs": "^11"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.53",
