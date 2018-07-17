@@ -84,7 +84,8 @@ module.exports = merge(commonConfig, {
   },
   plugins,
   optimization: {
-    runtimeChunk: true,
+    noEmitOnErrors: true,
+    runtimeChunk: 'single',
     concatenateModules: true,
     minimize: true,
     minimizer: [
