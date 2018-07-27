@@ -1,5 +1,5 @@
 node_modules
-/flow-typed
+/coverage
 /build
 /dist
 /.temp

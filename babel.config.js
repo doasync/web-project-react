@@ -1,8 +1,10 @@
 
+const { NODE_ENV } = process.env;
+
 const presets = [
   ['@babel/preset-env', {
     debug: false,
-    modules: false,
+    modules: NODE_ENV === 'test' ? 'commonjs' : false,
     useBuiltIns: 'usage',
     shippedProposals: true,
     exclude: [

@@ -14,7 +14,7 @@
 Create React project!
 =====================
 
-A boilerplate with Webpack 4, Babel 7, React, Flow, ESLint
+A boilerplate with Webpack 4, Babel 7, React, Flow, ESLint, Jest
 
 Installation
 ------------
@@ -57,8 +57,10 @@ npm run build
 
 Opens an interactive visualization treemap of your bundle's contents:
 ```
-npm run build-info
+npm run build:info
 ```
+
+You can find other scripts in the *"scripts"* section of the `package.json` file.
 
 Author
 ------

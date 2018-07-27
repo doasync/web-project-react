@@ -22,7 +22,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: './config/webpack.dev.js',
+        config: './webpack/webpack.dev.js',
       },
     },
     flowtype: {

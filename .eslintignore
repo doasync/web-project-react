@@ -2,4 +2,6 @@
 /node_modules
 /build
 /dist
-/config/info
+/webpack/info
+/coverage
+/flow-typed/npm

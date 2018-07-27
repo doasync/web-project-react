@@ -82,12 +82,12 @@ if (argv.eject) {
   console.log('* ', `${destination}/.gitignore`);
 
   fsExtra.moveSync(
-    `${destination}/config/info/.npmignore`,
-    `${destination}/config/info/.gitignore`,
+    `${destination}/webpack/info/.npmignore`,
+    `${destination}/webpack/info/.gitignore`,
     { overwrite: true },
   );
 
-  console.log('* ', `${destination}/config/info/.gitignore`);
+  console.log('* ', `${destination}/webpack/info/.gitignore`);
 
   console.log('\nDone! React project is ejected... Run `npm -i`');
 }
