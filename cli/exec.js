@@ -89,5 +89,5 @@ if (argv.eject) {
 
   console.log('* ', `${destination}/webpack/info/.gitignore`);
 
-  console.log('\nDone! React project is ejected... Run `npm -i`');
+  console.log('\nDone! React project is ejected... Run `npm i`');
 }
