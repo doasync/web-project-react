@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import { Root } from '~/app/root';
+import { Root } from './root';
 
 import '~/styles/main.scss';
 

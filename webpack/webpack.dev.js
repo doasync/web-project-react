@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpackPlugin = require('dotenv-webpack');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const FlowWebpackPlugin = require('flow-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
@@ -68,6 +69,7 @@ const rules = [{
 
 // ----------------------------Plugins------------------------------------------
 const plugins = [
+  new ErrorOverlayPlugin(),
   new HtmlWebpackPlugin({
     inject: 'body',
     template: paths.indexHtml,
